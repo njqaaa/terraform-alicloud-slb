@@ -27,7 +27,11 @@ module "slb" {
 module "slb_attachment" {
   source = "./modules/slb_attachment"
 
-  slb       = module.slb.slb_id
-  instances = var.instances
+  slb               = module.slb.slb_id
+  instances         = var.instances
+  backend_port      = var.backend_port
+  frontend_port     = var.frontend_port
+  protocol          = var.protocol
+  health_check_type = var.health_check_type
 }
 

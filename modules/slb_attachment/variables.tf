@@ -7,3 +7,19 @@ variable "instances" {
   type        = list(string)
 }
 
+variable "protocol" {
+  default = "tcp"
+}
+
+variable "frontend_port" {
+  default = "80"
+}
+
+variable "health_check_type" {
+  default = "tcp"
+}
+
+variable "backend_port" {
+  default = "80"
+}
+
